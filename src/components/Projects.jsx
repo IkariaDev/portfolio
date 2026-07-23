@@ -8,7 +8,7 @@ const projects = [
     id: 'hosting',
     title: 'Hosting.ikaria.dev',
     description: 'Eigene Hosting-Plattform auf Basis von VMs und Docker, betrieben über selbst-gehostetem Server + Cloudflare Tunnel.',
-    image: '/assets/hosting.png',
+    image: './assets/hosting.png',
     link: 'https://hosting.ikaria.dev',
     buttonText: 'Check it out',
     alt: 'Hosting ikaria dev platform screenshot'
@@ -17,7 +17,7 @@ const projects = [
     id: 'ikaria_games',
     title: 'Ikaria Games',
     description: 'YouTube-Kanal mit Gaming-Content, eigenem Branding und wachsender Community.',
-    image: '/assets/ikaria_games.png',
+    image: './assets/ikaria_games.png',
     link: 'https://www.youtube.com/@ikariagames',
     buttonText: 'Check it out',
     alt: 'Ikaria Games YouTube channel'
@@ -26,7 +26,7 @@ const projects = [
     id: 'cookary',
     title: 'Cookary',
     description: 'Eine vollständige Rezept-Plattform mit KI-Vorschlägen, Meal-Planning und Einkaufslisten. Gebaut, weil ich beim Kochen von Insta-Rezepte ordnung brauchte und keine App gefunden habe, die wirklich hilft.',
-    image: '/assets/cookary.png',
+    image: './assets/cookary.png',
     link: 'https://cookary.ikaria.dev',
     buttonText: 'Check it out',
     alt: 'Cookary recipe application'
@@ -35,7 +35,7 @@ const projects = [
     id: 'tmk',
     title: 'TMK Kirchstetten',
     description: 'Ich bin 2025 der TMK Kirchstetten beigetreten, nachdem ich mein Bronzenes Leistungsabzeichnung mit Auszeichnung abgeschlossen habe.',
-    image: '/assets/tmk.png',
+    image: './assets/tmk.png',
     link: 'https://tmk.kirchstetten.org/',
     buttonText: 'Check it out',
     imagePosition: 'center 15%',

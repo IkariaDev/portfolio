@@ -19,7 +19,7 @@ export default function Intro() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <img src="/assets/avatar.png" alt="Ilias Kapusta" className="avatar-img" />
+            <img src="./assets/avatar.png" alt="Ilias Kapusta" className="avatar-img" />
           </motion.div>
 
           <h1 className="hero-title hero-last-name">Kapusta</h1>
