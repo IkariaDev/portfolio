@@ -4,8 +4,8 @@ import SectionHeader from './SectionHeader';
 
 export default function Languages() {
   return (
-    <section className="languages-section">
-      <SectionHeader title="LANGUAGES" />
+    <section className="languages-section" id="languages" aria-label="Sprachkenntnisse">
+      <SectionHeader title="Sprachkenntnisse" />
 
       <motion.div
         className="languages-grid"
@@ -16,12 +16,22 @@ export default function Languages() {
       >
         <div className="languages-left">
           <h3 className="languages-title">Deutsch, Englisch & Spanisch</h3>
+          <p className="languages-subtitle">Sprachen für internationale Projekte & Kommunikation</p>
         </div>
 
         <div className="languages-right">
-          <p className="language-level">Deutsch C2</p>
-          <p className="language-level">Englisch B2</p>
-          <p className="language-level">Spanisch A1</p>
+          <div className="language-badge-row">
+            <span className="language-name">Deutsch</span>
+            <span className="language-level">C2 (Muttersprache)</span>
+          </div>
+          <div className="language-badge-row">
+            <span className="language-name">Englisch</span>
+            <span className="language-level">B2 (Fließend in Wort & Schrift)</span>
+          </div>
+          <div className="language-badge-row">
+            <span className="language-name">Spanisch</span>
+            <span className="language-level">A1 (Grundkenntnisse)</span>
+          </div>
         </div>
       </motion.div>
 
@@ -43,22 +53,44 @@ export default function Languages() {
           color: var(--text-main);
         }
 
+        .languages-subtitle {
+          font-size: 15px;
+          color: var(--text-muted);
+          margin-top: 6px;
+        }
+
         .languages-right {
           display: flex;
           flex-direction: column;
-          gap: 6px;
+          gap: 12px;
+        }
+
+        .language-badge-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 8px 14px;
+          background-color: var(--card-bg);
+          border: 1px solid var(--card-border);
+          border-radius: 10px;
+        }
+
+        .language-name {
+          font-weight: 600;
+          color: var(--text-main);
+          font-size: 15px;
         }
 
         .language-level {
-          font-size: 16px;
-          color: var(--text-muted);
+          font-size: 14px;
+          color: var(--accent-yellow);
           font-weight: 500;
         }
 
         @media (max-width: 768px) {
           .languages-grid {
             grid-template-columns: 1fr;
-            gap: 16px;
+            gap: 20px;
           }
         }
       `}</style>

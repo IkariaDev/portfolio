@@ -49,8 +49,8 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact-section" id="contact">
-      <SectionHeader title="CONTACT" />
+    <section className="contact-section" id="contact" aria-label="Kontakt und Standort">
+      <SectionHeader title="Kontakt & Standort" />
 
       <motion.div
         className="contact-container"
@@ -60,16 +60,16 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
       >
         <div className="contact-intro">
-          <h3 className="get-in-touch-title">Get in Touch</h3>
+          <h3 className="get-in-touch-title">Kontakt aufnehmen</h3>
           <p className="contact-subtitle">
-            Hast du Fragen? Schicke mir eine Mail und ich probiere Ihnen so schnell wie möglich zu antworten.
+            Haben Sie ein Projekt, eine Kooperationsanfrage oder Fragen zu meinen Arbeiten? Schreiben Sie mir direkt eine Nachricht – ich melde mich so rasch wie möglich zurück.
           </p>
 
           <div className="contact-info-list">
             <div className="info-item">
               <div className="info-label">
-                <Mail size={16} className="info-icon" />
-                <span>Email</span>
+                <Mail size={16} className="info-icon" aria-hidden="true" />
+                <span>E-Mail</span>
               </div>
               <a href="mailto:contact@ikaria.dev" className="info-value email-link">
                 contact@ikaria.dev
@@ -78,8 +78,8 @@ export default function Contact() {
 
             <div className="info-item">
               <div className="info-label">
-                <MapPin size={16} className="info-icon" />
-                <span>Wohnort</span>
+                <MapPin size={16} className="info-icon" aria-hidden="true" />
+                <span>Standort</span>
               </div>
               <p className="info-value">Niederösterreich, Österreich</p>
             </div>
@@ -92,8 +92,8 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="download-btn"
             >
-              <Download size={16} className="btn-icon" />
-              <span>Zeugnis Download</span>
+              <Download size={16} className="btn-icon" aria-hidden="true" />
+              <span>Zeugnis ansehen</span>
             </a>
 
             <a
@@ -102,8 +102,8 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="download-btn"
             >
-              <Download size={16} className="btn-icon" />
-              <span>Lebenslauf Download</span>
+              <Download size={16} className="btn-icon" aria-hidden="true" />
+              <span>Lebenslauf (PDF)</span>
             </a>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default function Contact() {
             <div className="success-state">
               <CheckCircle2 size={48} className="success-icon" />
               <h4>Vielen Dank!</h4>
-              <p>Deine Nachricht wurde erfolgreich an <strong>contact@ikaria.dev</strong> gesendet. Ich melde mich in Kürze bei dir!</p>
+              <p>Ihre Nachricht wurde erfolgreich übermittelt. Ich melde mich in Kürze bei Ihnen!</p>
               <button
                 type="button"
                 className="reset-btn"
@@ -134,20 +134,20 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Dein Name"
+                    placeholder="Ihr Name"
                     required
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email">E-Mail</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="max@email.com"
+                    placeholder="ihre.adresse@beispiel.at"
                     required
                   />
                 </div>
@@ -161,7 +161,7 @@ export default function Contact() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Wie kann ich helfen?"
+                  placeholder="Thema oder Projektidee"
                 />
               </div>
 
@@ -173,14 +173,14 @@ export default function Contact() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Erzähle mir mehr..."
+                  placeholder="Ihre Nachricht an mich..."
                   required
                 />
               </div>
 
               {status === 'error' && (
                 <p className="error-message">
-                  Es gab einen Fehler beim Senden. Bitte versuche es erneut oder schreibe direkt an contact@ikaria.dev.
+                  Es gab einen Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an contact@ikaria.dev.
                 </p>
               )}
 
@@ -193,8 +193,8 @@ export default function Contact() {
                   <span>Wird gesendet...</span>
                 ) : (
                   <>
-                    <span>Nachricht Senden</span>
-                    <Send size={16} />
+                    <span>Nachricht senden</span>
+                    <Send size={16} aria-hidden="true" />
                   </>
                 )}
               </button>

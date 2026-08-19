@@ -4,8 +4,8 @@ import SectionHeader from './SectionHeader';
 
 export default function About() {
   return (
-    <section className="about-section">
-      <SectionHeader title="ABOUT" />
+    <section className="about-section" id="about" aria-label="Über Ilias Kapusta">
+      <SectionHeader title="Über Ilias Kapusta" />
       
       <motion.div 
         className="about-grid"
@@ -15,15 +15,15 @@ export default function About() {
         transition={{ duration: 0.6 }}
       >
         <div className="about-left">
-          <h3 className="interests-title">Interessen</h3>
+          <h3 className="interests-title">Schwerpunkte & Interessen</h3>
           <p className="interests-text">
-            Web/App-Development, IT, Technik, Fotografie und Design, Content Creation, Wirtschaft, Gamedevelopment, Bouldern und die Blasmusik
+            Web- und App-Development, Linux- & Server-Hosting, Cloudflare-Infrastruktur, Fotografie & UI-Design, Content Creation, MINT-Bereich, Bouldern und Blasmusik.
           </p>
         </div>
 
         <div className="about-right">
           <p className="bio-text">
-            Ich wurde in Wien geboren und zog mit meinen Eltern, Michaela Kapusta (Lektorin, Bibliothekarin) und Rene Kapusta (Programmierer, App-Developer), nach Kirchstetten (Niederösterreich). Ich besuchte vier Jahre lang die Volksschule Kirchstetten (2017–2021) und nachdem ich jedes Jahr mit ausgezeichnetem Erfolg abgeschlossen hatte, wechselte ich nach St. Pölten in das BRG Josefstraße (2022-2024) mit Schwerpunkt auf MINT, wo ich dieses Jahr die Unterstufe mit einem weiteren ausgezeichneten Erfolg abgeschlossen habe. Besonders möchte ich meine volle Punktzahl in der Mathematik-IKM-Testung hervorheben.
+            Ich lebe in Niederösterreich und beschäftige mich seit vielen Jahren intensiv mit moderner Softwareentwicklung, IT-Infrastruktur und digitaler Mediengestaltung. Nach der Volksschule Kirchstetten besuchte ich das BG/BRG St. Pölten (Josefstraße) mit MINT-Schwerpunkt, wo ich die Unterstufe mit ausgezeichnetem Erfolg und voller Punktzahl bei der Mathematik-IKM-Testung abgeschlossen habe und nun den NAWI-Zweig der Oberstufe besuche. Neben der praktischen Umsetzung eigener Web- und Serverprojekte bin ich aktiver Content Creator und engagiere mich im regionalen Vereinsleben.
           </p>
         </div>
       </motion.div>

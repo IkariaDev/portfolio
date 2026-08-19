@@ -3,26 +3,40 @@ import { motion } from 'framer-motion';
 
 export default function Intro() {
   return (
-    <section className="intro-section">
+    <section className="intro-section" aria-label="Einführung">
       <div className="hero-content">
         <motion.div
-          className="hero-name-container"
+          className="hero-wrapper"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <h1 className="hero-title hero-first-name">Ilias</h1>
+          <h1 className="hero-h1">
+            <span className="hero-name-container">
+              <span className="hero-title hero-first-name">Ilias</span>
 
-          <motion.div
-            className="avatar-wrapper"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <img src="./assets/avatar.png" alt="Ilias Kapusta" className="avatar-img" />
-          </motion.div>
+              <motion.span
+                className="avatar-wrapper"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <img
+                  src="/assets/avatar.png"
+                  alt="Ilias Kapusta – Entwickler und Creator aus Niederösterreich, Österreich"
+                  className="avatar-img"
+                  width="190"
+                  height="190"
+                />
+              </motion.span>
 
-          <h1 className="hero-title hero-last-name">Kapusta</h1>
+              <span className="hero-title hero-last-name">Kapusta</span>
+            </span>
+
+            <span className="hero-subtitle-badge">
+              Portfolio aus Niederösterreich, Österreich
+            </span>
+          </h1>
         </motion.div>
 
         {/* 4-point Star Icon */}
@@ -31,20 +45,21 @@ export default function Intro() {
           initial={{ opacity: 0, scale: 0.5, rotate: -45 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
+          aria-hidden="true"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" fill="#e0f11f"/>
           </svg>
         </motion.div>
 
-        {/* Intro Subtitle */}
+        {/* Visible Introductory Paragraph */}
         <motion.p
           className="intro-subtitle"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          Ich bin Ilias Kapusta — ich bin 14 Jahre alt und komme<br className="desktop-br" /> aus Niederösterreich.
+          Ich bin Ilias Kapusta, Schüler, Entwickler und Creator aus Niederösterreich in Österreich. In meinem Portfolio zeige ich Web-, App-, Hosting- und Medienprojekte, die ich selbst entwickle und betreibe.
         </motion.p>
 
         {/* Scroll Prompt */}
@@ -53,6 +68,7 @@ export default function Intro() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
+          aria-hidden="true"
         >
           <div className="scroll-line-wrapper">
             <motion.div
@@ -83,6 +99,22 @@ export default function Intro() {
           width: 100%;
         }
 
+        .hero-wrapper {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+
+        .hero-h1 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          font-weight: normal;
+        }
+
         .hero-name-container {
           position: relative;
           display: flex;
@@ -103,7 +135,19 @@ export default function Intro() {
           user-select: none;
         }
 
+        .hero-subtitle-badge {
+          display: inline-block;
+          font-family: var(--font-body);
+          font-size: clamp(14px, 1.9vw, 20px);
+          font-weight: 600;
+          color: var(--accent-yellow);
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          margin-top: 18px;
+        }
+
         .avatar-wrapper {
+          display: block;
           width: clamp(110px, 15vw, 190px);
           height: clamp(110px, 15vw, 190px);
           margin: -24px 0;
@@ -123,14 +167,14 @@ export default function Intro() {
         }
 
         .star-container {
-          margin: 32px 0 24px 0;
+          margin: 28px 0 20px 0;
         }
 
         .intro-subtitle {
-          font-size: clamp(15px, 2vw, 20px);
+          font-size: clamp(16px, 2vw, 21px);
           color: var(--text-main);
-          max-width: 600px;
-          line-height: 1.5;
+          max-width: 680px;
+          line-height: 1.6;
           font-weight: 400;
           padding: 0 16px;
         }
@@ -172,11 +216,11 @@ export default function Intro() {
             min-height: 70vh;
             padding-top: 20px;
           }
-          .desktop-br {
-            display: none;
-          }
           .avatar-wrapper {
             margin: -14px 0;
+          }
+          .hero-subtitle-badge {
+            margin-top: 12px;
           }
         }
       `}</style>

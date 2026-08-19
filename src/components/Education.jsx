@@ -5,28 +5,28 @@ import SectionHeader from './SectionHeader';
 const eduLeft = [
   {
     school: 'Volksschule',
-    subtitle: 'VS Kirchstetten',
-    years: '2017 - 2021'
+    subtitle: 'VS Kirchstetten (Niederösterreich)',
+    years: '2017 – 2021'
   },
   {
-    school: 'BG/BRG Josefstraße',
+    school: 'BG/BRG St. Pölten (Josefstraße)',
     subtitle: 'NAWI-Zweig Oberstufe',
-    years: '2025 - Jetzt'
+    years: '2025 – Jetzt'
   }
 ];
 
 const eduRight = [
   {
-    school: 'BG/BRG Josefstraße',
-    subtitle: 'NAWI-Zweig Unterstufe',
-    years: '2021 - 2025'
+    school: 'BG/BRG St. Pölten (Josefstraße)',
+    subtitle: 'NAWI-Zweig Unterstufe mit MINT-Schwerpunkt',
+    years: '2021 – 2025'
   }
 ];
 
 export default function Education() {
   return (
-    <section className="education-section">
-      <SectionHeader title="EDUCATION" />
+    <section className="education-section" id="education" aria-label="Schulischer Bildungsweg">
+      <SectionHeader title="Ausbildung" />
 
       <div className="education-grid">
         <div className="education-column">
